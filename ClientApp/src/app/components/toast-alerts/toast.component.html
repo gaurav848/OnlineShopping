@@ -1,0 +1,19 @@
+<!-- <div *ngFor="let toast of toasts" 
+  class="d-flex flex-row alert alert-success alert-dismissible fade show ">
+    <p class="f6">{{ toast.message }}</p>
+     <div *ngIf="toast" class="toast-x absolute pointer" (click)="removeToast(toast)" aria-label="close">X</div> 
+  </div> -->
+
+  <div *ngFor="let toast of toasts; let i = index"   
+    class="alert alert-success alert-dismissible fade show" 
+    [style.top.px]="topValue + (i)*60+10"
+    [ngClass] = toast.CSSClassName 
+    style="z-index:11; right:25px; position: absolute; min-width:25%;" role="alert">
+      <strong> {{ toast.message }} </strong>
+      <button *ngIf="toast" class="close" (click)="removeToast(toast)" aria-label="close">X</button> 
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+      <!-- <span *ngIf="toast" class="close" (click)="removeToast(toast)" aria-hidden="true">&times;</span> -->
+      
+    </div>
