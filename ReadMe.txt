@@ -1,4 +1,4 @@
-Following part are done: GG : May/24/2019
+Following are done: GG : May/24/2019
 1. Bootstrap 4.1.3
 2. JQuery library
 3. Basic component folders for Services, Components, Pipes, Directives, Model
